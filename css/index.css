@@ -167,3 +167,14 @@ ul ul {
 .flex {
   display: flex;
 }
+header nav,
+footer nav {
+  width: 50%;
+  justify-content: space-around;
+}
+header nav a,
+footer nav a {
+  text-decoration: none;
+  color: black;
+  padding: 1em 0;
+}
