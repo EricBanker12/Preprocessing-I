@@ -164,6 +164,13 @@ ul {
 ul ul {
   list-style: circle;
 }
+section {
+  border-top: 2px solid black;
+  padding: 4rem 0;
+}
+section:last-of-type {
+  border-bottom: 2px solid black;
+}
 .flex {
   display: flex;
 }
@@ -177,4 +184,15 @@ footer nav a {
   text-decoration: none;
   color: black;
   padding: 1em 0;
+}
+.intro {
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.intro img {
+  width: 30%;
+  border: 2px solid #aaa;
+}
+.intro div {
+  width: 60%;
 }

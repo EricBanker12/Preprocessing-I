@@ -83,6 +83,15 @@ ul {
     ul{ list-style: circle;}
 }
 
+section {
+    border-top: 2px solid black;
+    padding: 4rem 0;
+}
+
+section:last-of-type {
+    border-bottom: 2px solid black;
+}
+
 .flex {
     display: flex;
 }
@@ -102,3 +111,17 @@ header, footer {
 }
 
 // intro
+
+.intro {
+    justify-content: space-around;
+    align-items: flex-start;
+    img {
+        width: 30%;
+        border: 2px solid #aaa;
+    }
+    div {
+        width: 60%;
+    }
+}
+
+// history
