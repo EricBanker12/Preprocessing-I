@@ -136,6 +136,7 @@ body {
 }
 html {
   font-size: 62.5%;
+  background-color: #f0f0f0;
 }
 body {
   font-size: 2rem;
@@ -179,22 +180,49 @@ footer nav {
   width: 50%;
   justify-content: space-around;
 }
+@media (max-width: 500px) {
+  header nav,
+  footer nav {
+    width: 100%;
+  }
+}
 header nav a,
 footer nav a {
   text-decoration: none;
   color: black;
   padding: 1em 0;
 }
+header nav a:hover,
+footer nav a:hover {
+  color: #aaa;
+}
 .intro {
   justify-content: space-around;
   align-items: flex-start;
+}
+@media (max-width: 500px) {
+  .intro {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+  }
 }
 .intro img {
   width: 30%;
   border: 2px solid #aaa;
 }
+@media (max-width: 500px) {
+  .intro img {
+    width: 95%;
+  }
+}
 .intro div {
   width: 60%;
+}
+@media (max-width: 500px) {
+  .intro div {
+    width: 95%;
+  }
 }
 .history {
   padding: 4rem 2.5%;
@@ -205,8 +233,19 @@ footer nav a {
 .skills div {
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .skills div {
+    flex-direction: column;
+    justify-content: unset;
+  }
+}
 .skills div div {
   width: 47.5%;
+}
+@media (max-width: 500px) {
+  .skills div div {
+    width: 100%;
+  }
 }
 .contact {
   padding: 4rem 2.5%;

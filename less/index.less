@@ -59,14 +59,43 @@ html, body {
 
 // start
 
-html {font-size: 62.5%}
+// variables
+@bg-color: #f0f0f0;
+@sub-color: #aaa;
+@font-stack: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+// mixins
+.full-mobile(){
+    @media (max-width:500px) {width: 100%;}
+}
+
+.two-col(){
+    padding: 4rem 2.5%;
+    div {
+        justify-content: space-between;
+        @media (max-width:500px) {
+            flex-direction: column;
+            justify-content: unset;
+        }
+        div {
+            width: 47.5%;
+            .full-mobile();
+        }
+    }
+}
+
+// elements
+html {
+    font-size: 62.5%;
+    background-color: @bg-color;
+}
 
 body {
     font-size: 2rem;
     line-height: 1.5;
     width: 90vw;
     margin: 0 auto;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: @font-stack;
 }
 
 h1 {font-size: 3.6rem}
@@ -97,56 +126,54 @@ section:last-of-type {
 }
 
 // header + footer
-
 header, footer {
     nav {
         width: 50%;
         justify-content: space-around;
+        .full-mobile();
         a {
             text-decoration: none;
             color: black;
             padding: 1em 0;
         }
-    }
-}
-
-// intro
-
-.intro {
-    justify-content: space-around;
-    align-items: flex-start;
-    img {
-        width: 30%;
-        border: 2px solid #aaa;
-    }
-    div {
-        width: 60%;
-    }
-}
-
-// history
-
-.history {
-    padding: 4rem 2.5%;
-    // div {
-    //     justify-content: space-between;
-    // }
-}
-
-// skills
-
-.skills {
-    padding: 4rem 2.5%;
-    div {
-        justify-content: space-between;
-        div {
-            width: 47.5%;
+        a:hover {
+            color: @sub-color;
         }
     }
 }
 
-// contact
+// intro
+.intro {
+    justify-content: space-around;
+    align-items: flex-start;
+    @media (max-width:500px) {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+    img {
+        width: 30%;
+        border: 2px solid @sub-color;
+        @media (max-width:500px) {width: 95%}
+    }
+    div {
+        width: 60%;
+        @media (max-width:500px) {width: 95%}
+    }
+}
 
+// history
+.history {
+    // .two-col();
+    padding: 4rem 2.5%;
+}
+
+// skills
+.skills {
+    .two-col();
+}
+
+// contact
 .contact {
     padding: 4rem 2.5%;
 }
