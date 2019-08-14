@@ -196,3 +196,18 @@ footer nav a {
 .intro div {
   width: 60%;
 }
+.history {
+  padding: 4rem 2.5%;
+}
+.skills {
+  padding: 4rem 2.5%;
+}
+.skills div {
+  justify-content: space-between;
+}
+.skills div div {
+  width: 47.5%;
+}
+.contact {
+  padding: 4rem 2.5%;
+}
