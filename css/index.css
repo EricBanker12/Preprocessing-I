@@ -134,3 +134,10 @@ html,
 body {
   height: 100%;
 }
+ul {
+  list-style: disc;
+  padding-left: 40px;
+}
+ul ul {
+  list-style: circle;
+}
